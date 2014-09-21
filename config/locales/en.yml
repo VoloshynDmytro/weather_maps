@@ -1,0 +1,279 @@
+en:
+  hello: Hello world
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+      d_month: |
+        %d.%b
+      year: "%Y"
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_days:
+        one: 1 day
+        other: "%{count} days"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_months:
+        one: 1 month
+        other: "%{count} months"
+      x_seconds:
+        one: 1 second
+        other: "%{count} seconds"
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match confirmation
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      not_an_integer: must be an integer
+      not_a_number: is not a number
+      odd: must be odd
+      record_invalid: 'Validation failed: %{errors}'
+      taken: has already been taken
+      too_long:
+        one: is too long (maximum is 1 character)
+        other: is too long (maximum is %{count} characters)
+      too_short:
+        one: is too short (minimum is 1 character)
+        other: is too short (minimum is %{count} characters)
+      wrong_length:
+        one: is the wrong length (should be 1 character)
+        other: is the wrong length (should be %{count} characters)
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+      home_page:
+        create: Create Home page
+      article:
+        create: Create Article
+    label:
+      home_page:
+        title: title
+      article:
+        content: content
+        home_page_id: home page
+        title: title
+      user:
+        email: email
+        password: password
+        remember_me: remember me
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ", and "
+      two_words_connector: " and "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+      day_month: "%d.%m"
+      year: "%Y"
+    pm: pm
+  activerecord:
+    models:
+      home_page: Home page
+      asset_file: Asset file
+      article: Article
+      content: Content
+    attributes:
+      home_page:
+        title: Title
+        about_block_text: About block text
+        about_block_title: About block title
+        environment_block_text: Environment block text
+        environment_block_title: Environment block title
+        menu_block_text: Menu block text
+        menu_block_title: Menu block title
+        testimonal_block_text: Testimonal block text
+        type: Type
+        address: Address
+        email: Email
+        fb_link: Fb link
+        gplus_link: Gplus link
+        phone: Phone
+        schedule: Schedule
+        twitter_link: Twitter link
+      asset_file:
+        attachment: Attachment
+      home_page/asset_files:
+        attachment: Asset files attachment
+      article:
+        content: Content
+        home_page_id: Home page
+        title: Title
+      user:
+        email: Email
+        password: Password
+        remember_me: Remember me
+      content:
+        gplus_link: Gplus link
+        twitter_link: Twitter link
+      home_page/content:
+        gplus_link: Content gplus link
+        twitter_link: Content twitter link
+  unauthorized: unauthorized
+  layouts:
+    header:
+      book-table: Book a Table
+      nav-first-item: About Us
+      nav-second-item: Menu
+      nav-third-item: Beverages
+    footer:
+      book-table: Book a table
+      nav-first-item: About us
+      nav-second-item: Menu
+      nav-third-item: Beverages
+  home_page:
+    index:
+      about_block_author: Carsten Marietta and Mats
+      beverages_file_text: n the walls of the first room you enter, you will therefore typically find images
+      beverages_file_title: Beverages
+      menu_file_title: Menu

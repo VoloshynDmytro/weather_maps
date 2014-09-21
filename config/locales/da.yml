@@ -1,0 +1,273 @@
+da:
+  date:
+    abbr_day_names:
+    - søn
+    - man
+    - tir
+    - ons
+    - tor
+    - fre
+    - lør
+    abbr_month_names:
+    - 
+    - jan
+    - feb
+    - mar
+    - apr
+    - maj
+    - jun
+    - jul
+    - aug
+    - sep
+    - okt
+    - nov
+    - dec
+    day_names:
+    - søndag
+    - mandag
+    - tirsdag
+    - onsdag
+    - torsdag
+    - fredag
+    - lørdag
+    formats:
+      default: "%d.%m.%Y"
+      long: "%e. %B %Y"
+      short: "%e. %b %Y"
+      day_month: "%d %b"
+      year: "%Y"
+      d_month: "%d. %b"
+    month_names:
+    - 
+    - januar
+    - februar
+    - marts
+    - april
+    - maj
+    - juni
+    - juli
+    - august
+    - september
+    - oktober
+    - november
+    - december
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cirka en time
+        other: cirka %{count} timer
+      about_x_months:
+        one: cirka en måned
+        other: cirka %{count} måneder
+      about_x_years:
+        one: cirka et år
+        other: cirka %{count} år
+      almost_x_years:
+        one: næsten et år
+        other: næsten %{count} år
+      half_a_minute: et halvt minut
+      less_than_x_minutes:
+        one: mindre end et minut
+        other: mindre end %{count} minutter
+      less_than_x_seconds:
+        one: mindre end et sekund
+        other: mindre end %{count} sekunder
+      over_x_years:
+        one: mere end et år
+        other: mere end %{count} år
+      x_days:
+        one: en dag
+        other: "%{count} dage"
+      x_minutes:
+        one: et minut
+        other: "%{count} minutter"
+      x_months:
+        one: en måned
+        other: "%{count} måneder"
+      x_seconds:
+        one: et sekund
+        other: "%{count} sekunder"
+    prompts:
+      day: Dag
+      hour: Time
+      minute: Minut
+      month: Måned
+      second: Sekund
+      year: "År"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: skal accepteres
+      blank: skal udfyldes
+      confirmation: stemmer ikke overens med bekræftelse
+      empty: må ikke udelades
+      equal_to: skal være %{count}
+      even: skal være et lige tal
+      exclusion: er reserveret
+      greater_than: skal være større end %{count}
+      greater_than_or_equal_to: skal være større end, eller lig med, %{count}
+      inclusion: er ikke på listen
+      invalid: er ikke gyldig
+      less_than: skal være mindre end %{count}
+      less_than_or_equal_to: skal være mindre end, eller lig med, %{count}
+      not_an_integer: er ikke et heltal
+      not_a_number: er ikke et tal
+      odd: skal være et ulige tal
+      record_invalid: 'Godkendelse gik galt: %{errors}'
+      taken: er allerede brugt
+      too_long: er for lang (højest %{count} tegn)
+      too_short: er for kort (mindst %{count} tegn)
+      wrong_length: har forkert længde (skulle være %{count} tegn)
+    template:
+      body: 'Der var problemer med følgende felter:'
+      header:
+        one: En fejl forhindrede %{model} i at blive gemt
+        other: "%{count} fejl forhindrede %{model} i at blive gemt"
+  hello: Hi !
+  helpers:
+    select:
+      prompt: Vælg...
+    submit:
+      create: Opret %{model}
+      submit: Gem %{model}
+      update: Opdater %{model}
+      home_page:
+        create: 
+      article:
+        create: 
+    label:
+      home_page:
+        title: 
+      article:
+        content: 
+        home_page_id: 
+        title: 
+      user:
+        email: 
+        password: 
+        remember_me: 
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: DKK
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Milliard
+          million: Million
+          quadrillion: Billiard
+          thousand: Tusind
+          trillion: Billion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " og "
+      two_words_connector: " og "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%e. %B %Y, %H.%M"
+      long: "%A d. %e. %B %Y, %H.%M"
+      short: "%e. %b %Y, %H.%M"
+      day_month: "%d.%m"
+      year: "%Y"
+    pm: ''
+  activerecord:
+    models:
+      home_page: 
+      asset_file: 
+      article: 
+      content: 
+    attributes:
+      home_page:
+        title: 
+        about_block_text: 
+        about_block_title: 
+        environment_block_text: 
+        environment_block_title: 
+        menu_block_text: 
+        menu_block_title: 
+        testimonal_block_text: 
+        type: 
+        address: 
+        email: 
+        fb_link: 
+        gplus_link: 
+        phone: 
+        schedule: 
+        twitter_link: 
+      asset_file:
+        attachment: 
+      home_page/asset_files:
+        attachment: 
+      article:
+        content: 
+        home_page_id: 
+        title: 
+      user:
+        email: 
+        password: 
+        remember_me: 
+      content:
+        gplus_link: 
+        twitter_link: 
+      home_page/content:
+        gplus_link: 
+        twitter_link: 
+  unauthorized: 
+  layouts:
+    header:
+      book-table: Book dit Bord
+      nav-first-item: Om Oss
+      nav-second-item: Menu
+      nav-third-item: Drikkevarer
+    footer:
+      book-table: Book dit bord
+      nav-first-item: Om oss
+      nav-second-item: Menu
+      nav-third-item: Drikkevarer
+  home_page:
+    index:
+      about_block_author: Carsten, Marietta og Mats
+      beverages_file_text: Morbi consectetur nibh ac tellus semper fringilla at et eros.
+      beverages_file_title: Drikkevarer
+      menu_file_title: Menu

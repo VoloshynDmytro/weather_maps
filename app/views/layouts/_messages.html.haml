@@ -1,0 +1,8 @@
+.alert.alert-danger{:class => "%>"}
+  %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+  %h3
+    = pluralize(errors.count, "error")
+    prohibited this page from being saved:
+  %ul
+    - errors.full_messages.each do |msg|
+      %li= msg
