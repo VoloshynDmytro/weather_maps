@@ -94,24 +94,25 @@ hr {
   background-color: #ffffff;
 }
 
-.navbar-default .navbar-nav > .active > a {
-  color: #ffffff;
-  background-color: #74cfae;
-  &:hover, &:focus {
+.navbar-default .navbar-nav{
+  margin-top: 15px;
+  .active > a {
+    font-size: 18px;
     color: #ffffff;
-    background-color: #74cfae;
+    background-color: #F2DA89;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+    &:hover, &:focus {
+      color: #ffffff;
+      background-color: #F2DA89;
+    }
   }
-}
-
-.navbar-brand {
-  font-size: 60px;
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .btn-theme {
   color: #ffffff;
-  background-color: #74cfae;
+  background-color: #F2DA89;
   border-color: transparent;
 }
 
@@ -127,11 +128,17 @@ hr {
   letter-spacing: 1px;
 }
 
+a.logo_section {
+  float: none;
+  img {
+   max-height: 100px;
+  }
+}
 /* WRAP SECTIONS */
 
-/* hello */
+/* welcome block */
 
-#hello {
+#welcome_block {
   width: 100%;
   padding-top: 250px;
   padding-bottom: 250px;
@@ -139,7 +146,7 @@ hr {
     font-size: 90px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #74cfae;
+    color: #F2DA89;
   }
   h2 {
     color: #c0c0c0;
@@ -147,11 +154,12 @@ hr {
   }
 }
 
-/* Green */
+/* content block*/
 
-#green {
-  background-color: #74cfae;
+#content_block {
+  background-color: #2c3e50;
   padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 0px;
   h3 {
     color: white;
@@ -165,31 +173,15 @@ hr {
   }
 }
 
-/* Skills */
-
-#skills {
-  background-color: #4e4e4e;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 50px;
-  h3 {
-    color: white;
-  }
-  p {
-    color: white;
-    font-weight: 400;
-  }
-}
-
 /* Social Links */
 
 #social {
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   i {
     font-size: 50px;
-    color: #74cfae;
+    color: #F2DA89;
   }
   .col-md-3 {
     &:hover {
@@ -203,7 +195,9 @@ hr {
 
 #f {
   padding-top: 20px;
-  background-color: #74cfae;
+  padding-bottom: 20px;
+  min-height: 50px;
+  background-color: #2c3e50;
   p {
     color: white;
     text-align: right;
