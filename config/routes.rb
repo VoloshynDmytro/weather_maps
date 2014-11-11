@@ -9,5 +9,7 @@ Weather_maps::Application.routes.draw do
       confirmations: "confirmations"
   }
 
+  resources :users
+
   root :to => "pages#home"
 end

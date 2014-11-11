@@ -1,18 +1,38 @@
-/ Fixed navbar
-.navbar.navbar-default.navbar-fixed-top
+
+.navbar.navbar-default
   .container
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand.logo_section{:href => "#"}
+      = link_to(root_path, class: "navbar-brand logo_section") do
         = image_tag "sun_storm_icon.png", class: "logo_image"
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
-        %li.active
-          %a{:href => "#contact"} Sign In
-        %li.active
-          %a{:href => "#contact"} Sing Up
+        - if user_signed_in?
+          .dropdown.custom-dropdown
+            %button#dLabel{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button", :class => "btn btn-warning"}
+              %i.fa.fa-user
+              = "Hello,  #{current_user.name}!  "
+              %span.caret
+            %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-cog
+                  %span Settings
+              %li
+                = link_to(destroy_user_session_path, data: {method: :delete }) do
+                  %i.fa.fa-sign-out
+                  %span Log Out
 
-    / /.nav-collapse
+        - else
+          %li.nav_button{:class => ("active" if current_page?(new_user_session_path)) }
+            = link_to(new_user_session_path) do
+              %i.fa.fa-sign-in
+              %span Sign In
+          %li.nav_button{:class => ("active" if current_page?(new_user_registration_path)) }
+            = link_to(new_user_registration_path) do
+              %i.fa.fa-hand-o-up
+              %span Sign Up
+

@@ -25,7 +25,6 @@ body {
   color: #555;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  margin-top: 70px;
 }
 
 /* Titles */
@@ -96,16 +95,53 @@ hr {
 
 .navbar-default .navbar-nav{
   margin-top: 15px;
-  .active > a {
-    font-size: 18px;
-    color: #ffffff;
-    background-color: #F2DA89;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin: 10px;
-    &:hover, &:focus {
+  li.nav_button {
+    &.active > a, a {
+      background-color: #888888;
+      font-size: 18px;
       color: #ffffff;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin: 10px;
+      &:hover, &:focus {
+        color: #ffffff;
+        background-color: #F2DA89;
+      }
+      i {
+        font-size: 24px;
+      }
+      span {
+        padding-left: 10px;
+      }
+    }
+    &.active > a {
       background-color: #F2DA89;
+    }
+  }
+  .custom-dropdown {
+    button {
+      background-color: #F2DA89;
+      font-weight: 700;
+      i {
+        padding-right: 10px;
+      }
+    }
+    .dropdown-menu {
+      background-color: #888888;
+      li {
+        a {
+          padding: 10px;
+          font-size: 20px;
+          color: #ffffff;
+          &:hover, &:focus {
+            color: #ffffff;
+            background-color: #F2DA89;
+          }
+          span {
+            padding-left: 10px;
+          }
+        }
+      }
     }
   }
 }
