@@ -1,5 +1,7 @@
 Weather_maps::Application.routes.draw do
 
+  resources :measurements
+
   resources :locations
 
   get 'pages/home'
