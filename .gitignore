@@ -14,7 +14,7 @@
 /.bundle
 /vendor/bundle/
 /vendor/ruby/
-
+/vendor/assets/bower_components
 # minimal Rails specific artifacts
 db/*.sqlite3
 /db/*.sqlite3-journal
