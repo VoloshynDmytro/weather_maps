@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "postinstall": "rm -rf bower_components/jquery"
-  },
-  "directory": "bower_components"
-}
