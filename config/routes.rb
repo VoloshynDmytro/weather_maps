@@ -1,5 +1,7 @@
 Weather_maps::Application.routes.draw do
 
+  resources :locations
+
   get 'pages/home'
 
   devise_for :user, controllers: {
