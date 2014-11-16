@@ -11,10 +11,11 @@
  * file per style scope.
  *
  *= require_self
- *= require fontawesome
  *= require_tree .
  */
 
 $icon-font-path: "bootstrap-sass-official/assets/fonts/bootstrap/";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "fontawesome/scss/font-awesome";
+@import "font-path";

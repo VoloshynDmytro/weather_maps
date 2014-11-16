@@ -11,11 +11,8 @@ module Weather_maps
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
-
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
-
-
       g.view_specs false
       g.helper_specs false
     end
@@ -36,10 +33,6 @@ module Weather_maps
       config.assets.paths << bower_path
     end
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
-    # Precompile Bootstrap fonts
-    config.assets.precompile << %r(bootstrap-sass-official/assets/fonts/bootstrap/[\w-]+\.(?:eot|svg|ttf|woff)$)
-    # Minimum Sass number precision required by bootstrap-sass
-    ::Sass::Script::Number.precision = [10, ::Sass::Script::Number.precision].max
 
     # We don't want the default of everything that isn't js or css, because it pulls too many things in
     config.assets.precompile.shift

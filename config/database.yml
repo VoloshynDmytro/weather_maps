@@ -51,11 +51,14 @@ test:
   template: template0
 
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   adapter:  postgresql
-  host:     localhost
   encoding: unicode
-  database: weather_maps_production
-  pool:     5
-  username: weather_maps
-  password: <%= ENV['DB_PASSWORD'] %>
-  template: template0
+
+  #template: template0
+  #database: weather_maps_production
+  #host:     localhost
+  #pool:     5
+  #username: weather_maps
+  #password: <%= ENV['DB_PASSWORD'] %>
+
