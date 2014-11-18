@@ -1,5 +1,5 @@
 en:
-  hello: Hello world
+  hello: Hello man!
   date:
     abbr_day_names:
     - Sun
@@ -35,9 +35,6 @@ en:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
       short: "%b %d"
-      d_month: |
-        %d.%b
-      year: "%Y"
     month_names:
     - 
     - January
@@ -115,8 +112,8 @@ en:
       invalid: is invalid
       less_than: must be less than %{count}
       less_than_or_equal_to: must be less than or equal to %{count}
-      not_an_integer: must be an integer
       not_a_number: is not a number
+      not_an_integer: must be an integer
       odd: must be odd
       record_invalid: 'Validation failed: %{errors}'
       taken: has already been taken
@@ -141,21 +138,11 @@ en:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
-      home_page:
-        create: Create Home page
-      article:
-        create: Create Article
     label:
-      home_page:
-        title: title
-      article:
-        content: content
-        home_page_id: home page
-        title: title
       user:
-        email: email
-        password: password
-        remember_me: remember me
+        email: 
+        password: 
+        remember_me: 
   number:
     currency:
       format:
@@ -181,9 +168,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: ''
+          unit: 
       format:
-        delimiter: ''
+        delimiter: 
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -199,10 +186,10 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: 
     precision:
       format:
-        delimiter: ''
+        delimiter: 
   support:
     array:
       last_word_connector: ", and "
@@ -214,66 +201,15 @@ en:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
-      day_month: "%d.%m"
-      year: "%Y"
     pm: pm
   activerecord:
-    models:
-      home_page: Home page
-      asset_file: Asset file
-      article: Article
-      content: Content
     attributes:
-      home_page:
-        title: Title
-        about_block_text: About block text
-        about_block_title: About block title
-        environment_block_text: Environment block text
-        environment_block_title: Environment block title
-        menu_block_text: Menu block text
-        menu_block_title: Menu block title
-        testimonal_block_text: Testimonal block text
-        type: Type
-        address: Address
-        email: Email
-        fb_link: Fb link
-        gplus_link: Gplus link
-        phone: Phone
-        schedule: Schedule
-        twitter_link: Twitter link
-      asset_file:
-        attachment: Attachment
-      home_page/asset_files:
-        attachment: Asset files attachment
-      article:
-        content: Content
-        home_page_id: Home page
-        title: Title
       user:
         email: Email
         password: Password
         remember_me: Remember me
-      content:
-        gplus_link: Gplus link
-        twitter_link: Twitter link
-      home_page/content:
-        gplus_link: Content gplus link
-        twitter_link: Content twitter link
-  unauthorized: unauthorized
-  layouts:
-    header:
-      book-table: Book a Table
-      nav-first-item: About Us
-      nav-second-item: Menu
-      nav-third-item: Beverages
-    footer:
-      book-table: Book a table
-      nav-first-item: About us
-      nav-second-item: Menu
-      nav-third-item: Beverages
-  home_page:
-    index:
-      about_block_author: Carsten Marietta and Mats
-      beverages_file_text: n the walls of the first room you enter, you will therefore typically find images
-      beverages_file_title: Beverages
-      menu_file_title: Menu
+  pages:
+    home:
+      sub_title: Weather monitoring application
+      content_block_title: What is Weather Maps?
+      content_block_text: 'Weather Maps is simple application created for monitor weather in different locations and put down measured data, so it can be used in ecology-economic monitoring researches. It is just study project, with basic functionallity. This project based on Ruby on Rails and other technologies: AngularJS and jQuery(front-end), PostgreSQL(database), Bower and Bundler(package managers), GoogleMapsAPI, LocaleApp(translations), Devise(auth).'

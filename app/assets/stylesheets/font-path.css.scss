@@ -1,3 +1,7 @@
+$icon-font-path: "bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "fontawesome/scss/font-awesome";
 @font-face {
   font-family: 'FontAwesome';
   src: font-url('fontawesome/fonts/fontawesome-webfont.eot?v=@{fa-version}');

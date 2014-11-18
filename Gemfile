@@ -10,7 +10,6 @@ gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'haml-rails'
 gem 'simple_form'
 
 gem 'cancan'
@@ -23,6 +22,7 @@ gem 'acts_as_list'
 gem 'recap', '~>1.0.0'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'localeapp'
 
 group :development do
   gem 'binding_of_caller', :platforms=>[:mri_21]

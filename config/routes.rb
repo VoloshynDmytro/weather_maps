@@ -1,19 +1,17 @@
 Weather_maps::Application.routes.draw do
+  scope "/:locale" do
+    resources :measurements
+    resources :locations
+    resources :users
+    get 'pages/home'
 
-  resources :measurements
+    devise_for :user, controllers: {
+        sessions: "sessions",
+        registrations: "registrations",
+        passwords: "passwords",
+        confirmations: "confirmations"
+    }
 
-  resources :locations
-
-  get 'pages/home'
-
-  devise_for :user, controllers: {
-      sessions: "sessions",
-      registrations: "registrations",
-      passwords: "passwords",
-      confirmations: "confirmations"
-  }
-
-  resources :users
-
+  end
   root :to => "pages#home"
 end
