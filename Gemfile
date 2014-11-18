@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'angular-rails-templates'
 gem 'simple_form'
 
 gem 'cancan'
