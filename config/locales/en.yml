@@ -1,5 +1,10 @@
 en:
-  hello: Hello man!
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        password: Password
+        remember_me: Remember me
   date:
     abbr_day_names:
     - Sun
@@ -96,6 +101,10 @@ en:
       month: Month
       second: Seconds
       year: Year
+  devise:
+    failure:
+      user:
+        unauthenticated: 
   errors:
     format: "%{attribute} %{message}"
     messages:
@@ -131,18 +140,19 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
+  hello: Hello man!
   helpers:
+    label:
+      user:
+        email: 
+        password: 
+        remember_me: 
     select:
       prompt: Please select
     submit:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
-    label:
-      user:
-        email: 
-        password: 
-        remember_me: 
   number:
     currency:
       format:
@@ -202,14 +212,8 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
-  activerecord:
-    attributes:
-      user:
-        email: Email
-        password: Password
-        remember_me: Remember me
   pages:
     home:
-      sub_title: Weather monitoring application
-      content_block_title: What is Weather Maps?
       content_block_text: 'Weather Maps is simple application created for monitor weather in different locations and put down measured data, so it can be used in ecology-economic monitoring researches. It is just study project, with basic functionallity. This project based on Ruby on Rails and other technologies: AngularJS and jQuery(front-end), PostgreSQL(database), Bower and Bundler(package managers), GoogleMapsAPI, LocaleApp(translations), Devise(auth).'
+      content_block_title: What is Weather Maps?
+      sub_title: Weather monitoring application
