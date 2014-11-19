@@ -4,6 +4,10 @@
     "angular": "latest",
     "angular-bootstrap": "latest",
     "bootstrap-sass-official": "latest",
-    "fontawesome": "latest"
+    "fontawesome": "latest",
+    "angularjs-geolocation" : "latest",
+    "ng-table"  : "latest",
+    "angular-bootstrap-slider" : "latest",
+    "n3-line-chart" : "latest"
   }
 }
