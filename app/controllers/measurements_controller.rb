@@ -1,4 +1,11 @@
 class MeasurementsController < ApplicationController
+
+  # For devise
+  before_filter :authenticate_user!
+
+  # For cancan
+  load_and_authorize_resource
+
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
 
   # GET /measurements

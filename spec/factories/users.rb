@@ -10,8 +10,7 @@ FactoryGirl.define do
     # confirmed_at Time.now
     factory :admin do
       after(:create) do |user|
-        admin_role = Role.find_or_create_by name: "admin"
-        user.roles = [admin_role]
+        user.admin!
       end
     end
   end

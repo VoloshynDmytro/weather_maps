@@ -5,6 +5,8 @@ uk:
         email: 
         password: 
         remember_me: 
+        name: 
+        password_confirmation: 
   date:
     abbr_day_names:
     - "нд."
@@ -177,6 +179,8 @@ uk:
         email: 
         password: 
         remember_me: 
+        name: 
+        password_confirmation: 
     select:
       prompt: "Оберіть: "
     submit:

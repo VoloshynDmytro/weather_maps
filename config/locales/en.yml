@@ -5,6 +5,8 @@ en:
         email: Email
         password: Password
         remember_me: Remember me
+        name: Name
+        password_confirmation: Password confirmation
   date:
     abbr_day_names:
     - Sun
@@ -147,6 +149,8 @@ en:
         email: 
         password: 
         remember_me: 
+        name: 
+        password_confirmation: 
     select:
       prompt: Please select
     submit:
