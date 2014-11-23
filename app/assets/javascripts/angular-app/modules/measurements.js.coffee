@@ -1,0 +1,1 @@
+@measurementsApp = angular.module('app.measurementsApp', ['ngResource'])

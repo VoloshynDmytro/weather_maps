@@ -1,0 +1,1 @@
+@locationsApp = angular.module('app.locationsApp', ['ngResource'])

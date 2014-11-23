@@ -221,3 +221,4 @@ en:
       content_block_text: 'Weather Maps is simple application created for monitor weather in different locations and put down measured data, so it can be used in ecology-economic monitoring researches. It is just study project, with basic functionallity. This project based on Ruby on Rails and other technologies: AngularJS and jQuery(front-end), PostgreSQL(database), Bower and Bundler(package managers), GoogleMapsAPI, LocaleApp(translations), Devise(auth).'
       content_block_title: What is Weather Maps?
       sub_title: Weather monitoring application
+  unauthorized: 
