@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :redirect_loggedin, only: [:home]
+  #before_action :redirect_loggedin, only: [:home]
 
   def home
   end

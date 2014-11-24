@@ -32,6 +32,7 @@ module Weather_maps
       config.sass.load_paths << bower_path
       config.assets.paths << bower_path
     end
+    config.angular_templates.ignore_prefix  = %w(angular-app/templates/)
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
 
     # We don't want the default of everything that isn't js or css, because it pulls too many things in

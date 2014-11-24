@@ -1,4 +1,4 @@
-angular.module('app.locationsApp').factory 'Location', ['$resource',
+@app.factory 'Location', ['$resource',
   class Location
     constructor: ->
       @location = $resource('/api/locations/:id',

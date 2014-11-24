@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to(root_path, class: "navbar-brand logo_section") do %>
+      <%= link_to((user_signed_in? ? admin_root_path :  root_path), class: "navbar-brand logo_section") do %>
           <%= image_tag "sun_storm_icon.png", class: "logo_image" %>
       <% end %>
     </div>
