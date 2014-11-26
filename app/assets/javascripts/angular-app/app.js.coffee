@@ -7,28 +7,29 @@
 @app.config([
   '$httpProvider', ($httpProvider)->
     $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-    #interceptor = [
-    #  "$location"
-    #  "$rootScope"
-    #  "$q"
-    #  ($location, $rootScope, $q) ->
-    #    success = (response) ->
-    #      response
-    #    error = (response) ->
-    #      if response.status is 401
-    #        $rootScope.$broadcast "event:unauthorized"
-    #        $location.path "/users/login"
-    #        return response
-    #      $q.reject response
-    #    return (promise) ->
-    #      promise.then success, error
-    #]
-    #$httpProvider.responseInterceptors.push interceptor
+    #with this full redirect work without error, can be removed later
+    interceptor = [
+      "$location"
+      "$rootScope"
+      "$q"
+      ($location, $rootScope, $q) ->
+        success = (response) ->
+          response
+        error = (response) ->
+          if response.status is 401
+            $rootScope.$broadcast "event:unauthorized"
+            $location.path "/users/login"
+            return response
+          $q.reject response
+        return (promise) ->
+          promise.then success, error
+    ]
+    $httpProvider.responseInterceptors.push interceptor
 ])
 
 
 
-@app.config(['$routeProvider', ($routeProvider) ->
+@app.config(['$routeProvider', '$locationProvider', ($routeProvider,  $locationProvider) ->
   $routeProvider
   .when '/',
     templateUrl: 'home.html',
@@ -53,10 +54,10 @@
   console.log 'angular app running'
 
 
-getCurrentUser = ($q, $rootScope, $location, $http) ->
+getCurrentUser = ($q, $rootScope, $location, $http, $window) ->
   !!$rootScope.currentUser or $http.get("/current_user"
   ).success((response) ->
     $rootScope.currentUser = response.user
   ).error((response) ->
-    $location.path "/users/login" unless response.success
+    $location.path "/" unless response.success
   )
