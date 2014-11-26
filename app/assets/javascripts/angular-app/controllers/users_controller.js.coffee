@@ -1,4 +1,4 @@
-@app.controller("UsersController", ['$scope', 'Session', ($scope, Session) ->
+@app.controller("UsersController", ['$scope', 'Session', '$location', ($scope, Session) ->
   $scope.login = (user) ->
     $scope.authError = null
     Session.login(user.email, user.password).then ((response) ->

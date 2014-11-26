@@ -1,29 +1,29 @@
 @app = angular.module('app', [
   # additional dependencies here, such as restangular
-  'ngRoute', 'templates', 'ui.bootstrap'
+  'ngRoute', 'templates', 'ui.bootstrap', 'sessionService'
 ])
 
 # for compatibility with Rails CSRF protection
 @app.config([
   '$httpProvider', ($httpProvider)->
     $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-    interceptor = [
-      "$location"
-      "$rootScope"
-      "$q"
-      ($location, $rootScope, $q) ->
-        success = (response) ->
-          response
-        error = (response) ->
-          if response.status is 401
-            $rootScope.$broadcast "event:unauthorized"
-            $location.path "/users/login"
-            return response
-          $q.reject response
-        return (promise) ->
-          promise.then success, error
-    ]
-    $httpProvider.responseInterceptors.push interceptor
+    #interceptor = [
+    #  "$location"
+    #  "$rootScope"
+    #  "$q"
+    #  ($location, $rootScope, $q) ->
+    #    success = (response) ->
+    #      response
+    #    error = (response) ->
+    #      if response.status is 401
+    #        $rootScope.$broadcast "event:unauthorized"
+    #        $location.path "/users/login"
+    #        return response
+    #      $q.reject response
+    #    return (promise) ->
+    #      promise.then success, error
+    #]
+    #$httpProvider.responseInterceptors.push interceptor
 ])
 
 
@@ -31,11 +31,11 @@
 @app.config(['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when '/',
-    auth: (user) ->
-      user
     templateUrl: 'home.html',
-    controller: 'HomeController'
-
+    controller: 'HomeController',
+    resolve: {
+      factory: getCurrentUser
+    }
   .when '/locations/index',
     templateUrl: 'locations/index.html',
     controller: 'LocationsIndexController'
@@ -49,14 +49,14 @@
   .otherwise({redirectTo: '/'})
 ])
 
-@app.run ($rootScope, $location) ->
+@app.run ($rootScope, $location, Session) ->
   console.log 'angular app running'
-  $rootScope.$on "$routeChangeStart", (ev, next, curr) ->
-    if next.$$route
-      console.log $rootScope.currentUser
-      user = $rootScope.currentUser
-      auth = next.$$route.auth
-      $location.path "/"  if auth and not auth(user)
-    return
-  return
 
+
+getCurrentUser = ($q, $rootScope, $location, $http) ->
+  !!$rootScope.currentUser or $http.get("/current_user"
+  ).success((response) ->
+    $rootScope.currentUser = response.user
+  ).error((response) ->
+    $location.path "/users/login" unless response.success
+  )
