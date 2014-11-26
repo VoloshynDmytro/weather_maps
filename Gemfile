@@ -10,24 +10,20 @@ gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
-gem 'simple_form'
+gem 'angularjs-rails-resource', '~> 1.1.1'
 
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
 gem 'pg'
-gem 'rolify'
 gem 'paperclip', '~> 4.1'
-gem 'acts_as_list'
 gem 'recap', '~>1.0.0'
 gem 'unicorn'
 gem 'unicorn-rails'
-gem 'localeapp'
 
 group :development do
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'better_errors'
-  gem 'html2haml'
   gem 'rails_layout'
 end
 

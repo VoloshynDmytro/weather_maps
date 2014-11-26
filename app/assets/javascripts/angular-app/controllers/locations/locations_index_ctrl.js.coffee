@@ -1,4 +1,4 @@
-@app.controller("LocationsController", ['$scope', ($scope) ->
+@app.controller("LocationsIndexCtrl", ['$scope', ($scope) ->
   $scope.testMessage = "Welcome to Locations"
   $scope.locations = []
   ###

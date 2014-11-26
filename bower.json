@@ -5,6 +5,7 @@
     "angular-mocks": "1.2.27",
     "angular-resource" : "1.2.27",
     "angular-route" : "1.2.27",
+    "angular-cookies" : "1.2.27",
     "angular-bootstrap": "latest",
     "bootstrap-sass-official": "latest",
     "fontawesome": "latest",
