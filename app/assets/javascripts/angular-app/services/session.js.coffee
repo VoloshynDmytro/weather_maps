@@ -18,7 +18,9 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
     logout: (redirectTo) ->
       $http.post("/logout").then ->
         service.currentUser = null
-        redirect redirectTo
+        $rootScope.currentUser = null
+        redirect(redirectTo)
+        return
 
     register: (email, password, confirm_password) ->
       $http.post("/users.json",
@@ -32,13 +34,15 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
         return
 
     getCurrentUser: ->
-      service.isAuthenticated or $http.get("/current_user"
-      ).success((response) ->
-        service.currentUser  = response.data.user
-      ).error(->
-        $location.path "/users/login"
-      )
-
+      if service.isAuthenticated()
+        #wrapping object in promise
+        return $q.when(service.currentUser)
+      else
+        $http.get("/current_user"
+        ).then ((response) ->
+          service.currentUser  = response.data.user
+        ), (error) ->
+          $q.reject(error)
 
     currentUser: null
     isAuthenticated: ->

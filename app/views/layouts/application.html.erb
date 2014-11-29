@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,600,700,400italic,700italic|Roboto+Slab:400,700,300" rel="stylesheet" type="text/css"></link>
 </head>
 <body>
-<%= render 'layouts/header' %>
+<div class="navbar navbar-default" ng-include src="'header.html'"></div>
 <%= yield %>
-<%= render 'layouts/footer' %>
+<div ng-include src="'footer.html'"></div>
 </body>
 </html>

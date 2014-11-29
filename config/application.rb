@@ -28,6 +28,7 @@ module Weather_maps
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
+    config.api_only = false
     root.join('vendor', 'assets', 'bower_components').to_s.tap do |bower_path|
       config.sass.load_paths << bower_path
       config.assets.paths << bower_path

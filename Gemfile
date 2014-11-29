@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
 gem 'angularjs-rails-resource', '~> 1.1.1'
+gem 'rails-api'
 
 gem 'cancan'
 gem 'devise'
