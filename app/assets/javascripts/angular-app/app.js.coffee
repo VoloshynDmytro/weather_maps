@@ -1,6 +1,6 @@
 @app = angular.module('app', [
   # additional dependencies here, such as restangular
-  'ngRoute', 'templates', 'ui.bootstrap', 'sessionService', 'app.locationsApp'
+  'ngRoute', 'templates', 'rails', 'ui.bootstrap', 'ngTable', 'sessionService', 'app.locationsApp'
 ])
 
 # for compatibility with Rails CSRF protection

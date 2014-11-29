@@ -13,3 +13,13 @@ user = User.find_by(email: ENV['ADMIN_EMAIL']) || User.create!(:name => ENV['ADM
 puts 'user: ' << user.name
 user.admin!
 
+puts 'seed locations'
+20.times do
+  rnd_lat = rand(49.55...49.85)
+  rnd_lng = rand(24.04...24.20)
+  rnd_num = rand(0..200)
+  Location.create!(:name => "Location#{rnd_num}", :city => "Lviv", :country => "Ukraine", :district => "Lviv district",
+                   :address => "Address #{rnd_num}", :lat => rnd_lat, :lng => rnd_lng, :user_id => user.id)
+end
+
+

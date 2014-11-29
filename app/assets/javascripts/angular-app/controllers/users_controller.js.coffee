@@ -16,8 +16,7 @@
 
   $scope.register = (user) ->
     $scope.authError = null
-    Session.register(user.email, user.password, user.confirm_password).then ((response) ->
-      console.log response
+    Session.register(user.email, user.name, user.password, user.confirm_password).then ((response) ->
       return
     ), (response) ->
       errors = ""

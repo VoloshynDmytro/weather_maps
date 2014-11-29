@@ -22,10 +22,11 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
         redirect(redirectTo)
         return
 
-    register: (email, password, confirm_password) ->
+    register: (email, name, password, confirm_password) ->
       $http.post("/users.json",
         user:
           email: email
+          name: name
           password: password
           password_confirmation: confirm_password
       ).then (response) ->

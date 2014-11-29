@@ -16,7 +16,7 @@
 //@import url("https://fnt.webink.com/wfs/webink.css/?project=5ef0c33a-eb86-41ec-af6c-fbcd378fef3a&fonts=7ADDF267-02FA-4E7A-F098-EF6D9CFEF9AE:f=ProximaNova-Black,58DEFEBD-4A55-477B-3C13-525C6AEBDD7A:f=ProximaNova-Regular,382B4521-6228-4C38-41BC-3DE66C7C910A:f=ProximaNova-Bold,5D5458EE-817C-409A-A829-39E6223D6444:f=PTSerif-Italic,8077EE42-0ADA-525C-C3DB-4DAFD57BE06D:f=PTSerif-Regular");
 /* OVERALL ASPECT */
 
-body {
+body{
   background-color: #f2f2f2;
   font-family: "ProximaNova-Regular", sans-serif;
   font-weight: 300;
@@ -31,8 +31,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "ProximaNova-Black", sans-serif;
   font-weight: 300;
-  color: #333;
+  color: #555;
 }
+label {
+  color: #2c3e50;
+  font-weight: 900;
+  font-size: 18px;
+}
+
 
 /* Paragraph & Typographic */
 

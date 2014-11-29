@@ -16,6 +16,7 @@
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
+//= require ng-table/ng-table
 //= require angularjs/rails/resource
 //= require angular-bootstrap
 //= require angular-app/app
