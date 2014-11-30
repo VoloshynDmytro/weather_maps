@@ -5,24 +5,36 @@
                 <h1>{{ testMessage }}</h1>
                 <table  class="rwd-table" ng-table="tableParams">
                     <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>City</th>
-                        <th>Country</th>
-                        <th>District</th>
-                        <th>Address</th>
-                        <th></th>
-                    </tr>
+                        <tr>
+                            <th class="sortable" ng-class="{'sort-asc': tableParams.isSortBy('name', 'asc'), 'sort-desc': tableParams.isSortBy('name', 'desc')}"
+                                ng-click="tableParams.sorting({'name' : tableParams.isSortBy('name', 'asc') ? 'desc' : 'asc'})">
+                                <span>Name</span><i class="pull-right fa" ng-class="{'fa-sort-asc': tableParams.isSortBy('name', 'asc'), 'fa-sort-desc': tableParams.isSortBy('name', 'desc')}"></i>
+                            </th>
+                            <th class="sortable" ng-class="{'sort-asc': tableParams.isSortBy('city', 'asc'), 'sort-desc': tableParams.isSortBy('city', 'desc')}"
+                                ng-click="tableParams.sorting({'city' : tableParams.isSortBy('city', 'asc') ? 'desc' : 'asc'})">
+                                <span>City</span><i class="pull-right fa" ng-class="{'fa-sort-asc': tableParams.isSortBy('city', 'asc'), 'fa-sort-desc': tableParams.isSortBy('city', 'desc')}"></i>
+                            </th>
+                            <th class="sortable" ng-class="{'sort-asc': tableParams.isSortBy('country', 'asc'), 'sort-desc': tableParams.isSortBy('country', 'desc')}"
+                                ng-click="tableParams.sorting({'country' : tableParams.isSortBy('country', 'asc') ? 'desc' : 'asc'})">
+                                <span>Country</span><i class="pull-right fa" ng-class="{'fa-sort-asc': tableParams.isSortBy('country', 'asc'), 'fa-sort-desc': tableParams.isSortBy('country', 'desc')}"></i>
+                            </th>
+                            <th class="sortable" ng-class="{'sort-asc': tableParams.isSortBy('district', 'asc'), 'sort-desc': tableParams.isSortBy('district', 'desc')}"
+                                ng-click="tableParams.sorting({'district' : tableParams.isSortBy('district', 'asc') ? 'desc' : 'asc'})">
+                                <span>District</span><i class="pull-right fa" ng-class="{'fa-sort-asc': tableParams.isSortBy('district', 'asc'), 'fa-sort-desc': tableParams.isSortBy('district', 'desc')}"></i>
+                            </th>
+                            <th class="sortable" ng-class="{'sort-asc': tableParams.isSortBy('address', 'asc'), 'sort-desc': tableParams.isSortBy('address', 'desc')}"
+                                ng-click="tableParams.sorting({'address' : tableParams.isSortBy('address', 'asc') ? 'desc' : 'asc'})">
+                                <span>Address</span><i class="pull-right fa" ng-class="{'fa-sort-asc': tableParams.isSortBy('address', 'asc'), 'fa-sort-desc': tableParams.isSortBy('address', 'desc')}"></i>
+                            </th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="location in locations">
-                        <td sortable="'name'">{{ location.name }}</td>
-                        <td sortable="'city'">{{ location.city }}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                        </td>
+                    <tr ng-repeat="location in $data">
+                        <td data-title="'Name'" sortable="'name'">{{ location.name }}</td>
+                        <td data-title="'City'" sortable="'city'">{{ location.city }}</td>
+                        <td data-title="'Country'" sortable="'country'">{{ location.country }}</td>
+                        <td data-title="'District'" sortable="'district'">{{ location.district }}</td>
+                        <td data-title="'Address'" sortable="'address'">{{ location.address }}</td>
                     </tr>
                     </tbody>
                 </table>

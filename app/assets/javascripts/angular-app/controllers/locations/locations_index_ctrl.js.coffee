@@ -2,22 +2,18 @@
   $scope.testMessage = "Welcome to Locations"
   $scope.locations = []
 
-  #$scope.$watch "locations", (locs) ->
-  #  $scope.locations = locs
-
   $scope.tableParams = new ngTableParams(
-    console.log $scope.locations
     page: 1 # show first page
     count: 10 # count per page
     sorting:
       name: "asc" # initial sorting
   ,
-    total: $scope.locations.length # length of data
+    total: 0
     getData: ($defer, params) ->
-      # use build-in angular filter
-      orderedData = (if params.sorting() then $filter("orderBy")($scope.locations, params.orderBy()) else $scope.locations)
-      $defer.resolve orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count())
-      return
+      $scope.loadLocations().then (result) ->
+        params.total result.length
+        orderedData = (if params.sorting() then $filter("orderBy")(result, params.orderBy()) else result)
+        $defer.resolve orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count())
   )
 
   # ng-init binding (Service Call)
