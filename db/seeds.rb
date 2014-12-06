@@ -19,7 +19,7 @@ puts 'seed locations'
   rnd_lng = rand(24.04...24.20)
   rnd_num = rand(0..200)
   Location.create!(:name => "Location#{rnd_num}", :city => "Lviv", :country => "Ukraine", :district => "Lviv district",
-                   :address => "Address #{rnd_num}", :lat => rnd_lat, :lng => rnd_lng, :user_id => user.id)
+                   :address => "Address #{rnd_num}", :latitude => rnd_lat, :longitude => rnd_lng, :user_id => user.id)
 end
 
 

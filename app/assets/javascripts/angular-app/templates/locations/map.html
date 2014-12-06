@@ -1,7 +1,25 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="locations_wrapper" ng-controller="LocationsIndexCtrl" ng-init="loadLocations()">
+        <div class="col-md-12 col-sm-12 col-xs-24 locations_wrapper" ng-controller="LocationsMapCtrl"
+             ng-init="loadLocations()">
+            <div class="col-md-8 col-sm-8">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                    <ui-gmap-marker ng-repeat="location in locations" coords="{latitude:location.latitude,longitude:location.longitude}" idkey="location.id" options="{ labelContent:location.name, labelAnchor: '25 -2', labelClass: 'marker-labels'}" >
+                        <ui-gmap-window closeClick="'closeClick'" ng-cloak>
+                            <p>This is an info window at {{ location.latitude | number:4 }}, {{ location.longitude | number:4 }}!</p>
+                        </ui-gmap-window>
+                    </ui-gmap-marker>
+
+                </ui-gmap-google-map>
+            </div>
+            <div class="col-md-4 col-sm-4 locations_sidebar_wrapper">
+                <h2 class="locations_sidebar_header">Locations: </h2>
+
+                <div class="locations_sidebar">
+                    <ul>
+                        <li ng-repeat="location in locations">{{ location.name }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

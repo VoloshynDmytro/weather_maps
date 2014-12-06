@@ -1,6 +1,6 @@
 @app = angular.module('app', [
   # additional dependencies here, such as restangular
-  'ngRoute', 'templates', 'rails', 'ui.bootstrap', 'ngTable', 'sessionService', 'app.locationsApp'
+  'ngRoute', 'templates', 'rails', 'ui.bootstrap', 'ngTable', 'sessionService', 'uiGmapgoogle-maps', 'app.locationsApp'
 ])
 
 # for compatibility with Rails CSRF protection
@@ -14,9 +14,15 @@
   .when '/',
     templateUrl: 'home.html',
     controller: 'HomeController',
-  .when '/locations/index',
+  .when '/locations',
     templateUrl: 'locations/index.html',
     controller: 'LocationsIndexCtrl',
+    resolve: {
+      auth: checkLoggedIn
+    }
+  .when '/locations/map',
+    templateUrl: 'locations/map.html',
+    controller: 'LocationsMapCtrl',
     resolve: {
       auth: checkLoggedIn
     }

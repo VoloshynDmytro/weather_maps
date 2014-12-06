@@ -4,7 +4,7 @@ class Api::LocationsController < Api::ApplicationController
   # GET /api/locations
   # GET /api/locations.json
   def index
-    @api_locations = Location.all
+    @api_locations = current_user.locations
     render json: @api_locations
   end
 
@@ -18,6 +18,7 @@ class Api::LocationsController < Api::ApplicationController
   # POST /api/locations.json
   def create
     @api_location = Location.new(location_params)
+    @api_location.user = current_user
     if @api_location.save
       render json: @api_location, status: :created, location: api_location_path(@api_location)
     else

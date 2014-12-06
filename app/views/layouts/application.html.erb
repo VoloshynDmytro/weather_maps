@@ -3,6 +3,7 @@
 <head>
   <title>Weather_maps</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta charset="UTF-8"/>
@@ -12,6 +13,7 @@
 </head>
 <body>
 <div class="navbar navbar-default" ng-include src="'header.html'"></div>
+<div ng-if="user" ng-include src="'navigation.html'"></div>
 <%= yield %>
 <div ng-include src="'footer.html'"></div>
 </body>

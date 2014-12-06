@@ -17,6 +17,8 @@
 //= require angular-route
 //= require angular-rails-templates
 //= require ng-table/ng-table
+//= require lodash/dist/lodash
+//= require angular-google-maps/dist/angular-google-maps
 //= require angularjs/rails/resource
 //= require angular-bootstrap
 //= require angular-app/app

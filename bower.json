@@ -12,6 +12,7 @@
     "angularjs-geolocation" : "latest",
     "ng-table"  : "latest",
     "angular-bootstrap-slider" : "latest",
-    "n3-line-chart" : "latest"
+    "n3-line-chart" : "latest",
+    "angular-google-maps" : "latest"
   }
 }
