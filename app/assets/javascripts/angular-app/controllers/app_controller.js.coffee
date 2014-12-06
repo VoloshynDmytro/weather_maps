@@ -15,12 +15,4 @@
   $scope.logout = ->
     Session.logout "/"
 
-  $scope.$on "event:unauthorized", (event) ->
-    console.log "unauthorized"
-    return
-
-  $scope.$on "event:authenticated", (event) ->
-    console.log "authenticated"
-    return
-
 ])

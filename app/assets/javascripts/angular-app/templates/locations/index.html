@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <div class="locations_wrapper" ng-controller="LocationsIndexCtrl" ng-init="loadLocations()">
-                <h1>{{ testMessage }}</h1>
+            <div class="locations_wrapper" ng-controller="LocationsIndexCtrl">
+                <h1 class="pull-left">{{ testMessage }}</h1>
+                <button class="btn btn-info btn-large pull-right"><i class="fa fa-map-marker"></i>Locations on Map</button>
                 <table  class="rwd-table" ng-table="tableParams">
                     <thead>
                         <tr>

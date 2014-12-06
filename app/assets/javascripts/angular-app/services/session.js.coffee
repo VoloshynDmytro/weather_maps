@@ -6,7 +6,7 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
 
   service =
     login: (email, password) ->
-      $http.post("/login",
+      $http.post("/api/login",
         user:
           email: email
           password: password
@@ -16,7 +16,7 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
         return
 
     logout: (redirectTo) ->
-      $http.post("/logout").then ->
+      $http.post("/api/logout").then ->
         service.currentUser = null
         $rootScope.currentUser = null
         redirect(redirectTo)
@@ -39,7 +39,7 @@ angular.module('sessionService', []).factory "Session", ($location, $http, $q, $
         #wrapping object in promise
         return $q.when(service.currentUser)
       else
-        $http.get("/current_user"
+        $http.get("/api/current_user"
         ).then ((response) ->
           service.currentUser  = response.data.user
         ), (error) ->

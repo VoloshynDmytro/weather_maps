@@ -26,20 +26,6 @@
     location.delete()
     $scope.loadLocations()
 
-  # ng-click binding (Service Call)
-  $scope.updateLocation = (location) ->
-    location.update()
-    $scope.loadLocations()
-
-  # ng-click binding (Service Call)
-  $scope.createLocation = (location) ->
-    location.create()
-    $scope.loadLocations()
-
-  # ng-click binding (Local Operation)
-  $scope.createNewLocation = () ->
-    $scope.locations.push(new Location())
-
   return
 
 ])
