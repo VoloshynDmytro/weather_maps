@@ -3,10 +3,26 @@
         <div class="col-md-12 col-sm-12 col-xs-24 locations_wrapper" ng-controller="LocationsMapCtrl"
              ng-init="loadLocations()">
             <div class="col-md-8 col-sm-8">
-                <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                    <ui-gmap-marker ng-repeat="location in locations" coords="{latitude:location.latitude,longitude:location.longitude}" idkey="location.id" options="{ labelContent:location.name, labelAnchor: '25 -2', labelClass: 'marker-labels'}" >
-                        <ui-gmap-window closeClick="'closeClick'" ng-cloak>
-                            <p>This is an info window at {{ location.latitude | number:4 }}, {{ location.longitude | number:4 }}!</p>
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' control='map.control'>
+                    <ui-gmap-marker ng-repeat="location in locations" click="onMarkerClicked(location)"
+                                    control="map.markersControl"
+                                    coords="{latitude:location.latitude,longitude:location.longitude}"
+                                    idkey="location.id"
+                                    options="{ labelContent:location.name, labelAnchor: '25 -2', labelClass: 'marker-labels'}">
+                        <ui-gmap-window  show="location.showWindow"
+                                        closeClick="'closeClick'" control="map.windowsControl" ng-cloak>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h4>Details:</h4>
+                                    <hr />
+                                    <ul>
+                                        <li><b>Name:</b> {{ location.name }}</li>
+                                        <li><b>Location:</b> {{ location.country }}, {{ location.city }}, {{ location.address }}</li>
+                                        <li><b>Coords:</b> {{ location.latitude | number:4 }}, {{
+                                            location.longitude | number:4 }}</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </ui-gmap-window>
                     </ui-gmap-marker>
 
@@ -17,7 +33,7 @@
 
                 <div class="locations_sidebar">
                     <ul>
-                        <li ng-repeat="location in locations">{{ location.name }}</li>
+                        <li ng-repeat="location in locations" ng-click="showInfo(location)">{{ location.name }}</li>
                     </ul>
                 </div>
             </div>

@@ -304,6 +304,10 @@ a.logo_section {
         li {
           border-bottom: 1px solid #9EC4EA;
           padding: 10px 20px;
+          cursor: pointer;
+          &:hover, &:focus {
+            color: $primary_yellow;
+          }
 
 
         }

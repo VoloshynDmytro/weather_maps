@@ -1,5 +1,4 @@
 @locationsApp.controller("LocationsIndexCtrl", ['$scope', '$filter', 'Location', 'ngTableParams', ($scope, $filter, Location, ngTableParams) ->
-  $scope.testMessage = "Welcome to Locations"
   $scope.locations = []
 
   $scope.tableParams = new ngTableParams(
