@@ -26,6 +26,12 @@
     resolve: {
       auth: checkLoggedIn
     }
+  .when '/locations/new',
+    templateUrl: 'locations/new.html',
+    controller: 'LocationsNewCtrl',
+    resolve: {
+      auth: checkLoggedIn
+    }
   .when '/users/login',
     templateUrl:'users/login.html',
     controller:'UsersController'

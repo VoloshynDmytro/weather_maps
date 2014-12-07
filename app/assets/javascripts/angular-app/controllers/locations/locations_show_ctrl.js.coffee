@@ -1,5 +1,6 @@
-@locationsApp.controller("LocationsActionsCtrl", ['$scope', '$filter', 'Location', ($scope, $filter, Location) ->
+@locationsApp.controller("LocationsShowCtrl", ['$scope', '$filter', 'Location', ($scope, $filter, Location) ->
   $scope.locations = []
+
 
   # ng-init binding (Service Call)
   $scope.loadLocations = () ->
@@ -21,10 +22,5 @@
     location.create()
     $scope.loadLocations()
 
-  # ng-click binding (Local Operation)
-  $scope.createNewLocation = () ->
-    $scope.locations.push(new Location())
-
-  return
 
 ])
